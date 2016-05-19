@@ -1,0 +1,81 @@
+---------------------------------------------------------------------03/09/2007
+DocExport.swp                     Written by Leonard Kikstra,
+                                  Copyright 2003-2007, Leonard Kikstra
+                                  Downloaded from Lenny's SolidWorks Resources
+                                       at http://www.lennyworks.com/solidworks
+-------------------------------------------------------------------------------
+
+INTRODUCTION:
+
+For use with SolidWorks Models:
+  DocExport.swp permits a user to export selected configurations of the current 
+  SolidWorks model to different file types. This is useful when you need to 
+  separate many configurations into individual files of another file type for a 
+  vendor to use/reference.  This macro works by displaying a selection list of 
+  configurations in the current SolidWorks model, then the user can select the 
+  configurations and the export file type.  
+
+For use with SolidWorks Drawings:
+  DocExport.swp permits a user to export selected drawing sheets of the current 
+  SolidWorks drawing to a different file type. This is useful when you need to 
+  send a drawing to a vendor to use/reference and thry don't have SolidWorks. 
+  This macro works by displaying a selection list of drawing sheets in the 
+  current SolidWorks drawing, then the user can select the drawing sheets and 
+  the export file type.  
+
+Batch Mode (when no documet is loaded in SolidWorks)
+  All documents (parts, assemblies, and drawings) will be found dna displayed to 
+  the user.  The user can then select the documents and export types.  During 
+  processing, all configurations and sheets will be exported.
+
+During the export process
+  The export file name will appear in the status bar at the bottom of the form, 
+  the document will be regenerated on the screen, and the exported file will be 
+  created.  The exported files will be created in the same directory the current 
+  document was loaded from.
+
+-------------------------------------------------------------------------------
+
+DISCLAIMER:
+* These macros are provided free of charge for personal use and/or reference. 
+* These macros may be freely distributed, provided the original copyright 
+  notices remain unchanged and intact. 
+* All macros were written to work with SolidWorks 2003. 
+* These macros, and corresponding files, are provided as is. 
+* There are no warranties, expressed or implied, that these macros will perform 
+  as indicated, perform to users expectations, or complete a specific task. 
+* These macros will change the current SolidWorks document. Use these macros at 
+  your own risk. Back up your data before using this macro on any SolidWorks 
+  document. 
+
+-------------------------------------------------------------------------------
+
+CONFIGURING THE EXTERNAL DATA FILE:
+
+GENERAL:
+  * Data file must be in same directory as macro file.  
+  * Data file must have same name as macro file with '.ini' extension.
+  * Section names must be enclose with [] brackets. 
+  * Section names are case sensitive and must match.  
+  * An empty line must exist at the end of each section.
+  * Data with special characters should be enclosed in "" quotes.
+  * The sections [MODEL] and [DRAWING] must exist in the data file.
+  * Place notes in the [NOTES] section in the order most likely to be used.
+
+Under each section, enter the export 'Type' and 'Extension' separated by a 
+comma as shown below.  The lines shown below exist in the default ini file as 
+downloaded.  If the ini file is missing or cannot be found, there will be a 
+limited number of file types will still be evailable.
+
+[MODEL]
+"STEP", ".step"
+"IGES", ".igs"
+"ACIS",  ".sat"
+"STL",  ".stl"
+
+[DRAWING]
+"DWG vector", ".dwg"
+"DXF vector", ".dxf"
+"JPEG raster", ".jpg"
+
+-------------------------------------------------------------------------------
